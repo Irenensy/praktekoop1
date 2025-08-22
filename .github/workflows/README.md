@@ -1,10 +1,9 @@
 ---
-title: {{title}}
-emoji: {{emoji}}
-colorFrom: {{colorFrom}}
-colorTo: {{colorTo}}
-sdk: {{sdk}}
-sdk_version: "{{sdkVersion}}"
-app_file: app.py
+title: Praktek OOP
+emoji: 👀
+colorFrom: blue
+colorTo: green
+sdk: docker
 pinned: false
 ---
+
