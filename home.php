@@ -1,13 +1,7 @@
 <?php
 // ---- Bagian PHP ----
 $title = "Website Sederhana dengan PHP";
-$pesan = "";
-
-// Jika form dikirim
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nama = htmlspecialchars($_POST['nama']);
-    $pesan = "Halo, $nama! Selamat datang di websitemu 😊";
-}
+$pesan = "Halo, Selamat datang di websitemu 😊"; // pesan langsung tampil tanpa input
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -27,12 +21,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       color: white;
       padding: 15px;
     }
-    form {
-      margin-top: 20px;
+    main {
+      margin-top: 30px;
     }
-    input, button {
-      padding: 8px;
-      margin: 5px;
+    footer {
+      margin-top: 50px;
+      font-size: 14px;
+      color: #555;
     }
   </style>
 </head>
@@ -42,18 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </header>
 
   <main>
-    <h2>Formulir Sapa</h2>
-    <form method="post">
-      <input type="text" name="nama" placeholder="Masukkan namamu" required>
-      <button type="submit">Kirim</button>
-    </form>
-
-    <?php if ($pesan): ?>
-      <p><b><?php echo $pesan; ?></b></p>
-    <?php endif; ?>
+    <h2>Selamat Datang!</h2>
+    <p><b><?php echo $pesan; ?></b></p>
   </main>
 <a href="index.php"> Kembali ke halaman Index
-</a>
   <footer>
     <p>&copy; <?php echo date("Y"); ?> Website Sederhana PHP</p>
   </footer>
